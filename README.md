@@ -40,7 +40,7 @@ was a bit challenging, but overall it was a great learning experience.
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2016] [James Han]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
