@@ -22,7 +22,7 @@
             <form method="post">
                 Bill subtotal: $ 
                 <!-- text input box for subtotal,  checks if number and > 0 and saves the subtotal amount -->
-                <!-- if not, sets the bill error flag and clears text input box -->
+                <!-- if not, sets the bill error flag -->
                 <input type="text" id="subtotal" name="subtotal" value="<?php 
                     if(isset($_POST['subtotal'])) {
                         if(($_POST['subtotal'] > 0) && is_numeric($_POST['subtotal'])) {
@@ -30,7 +30,7 @@
                             $subvar = $_POST['subtotal'];
                         }
                         else {
-                            echo '';
+                            echo $_POST['subtotal'];
                             $billerr = 1;
                         }
                     }
@@ -71,7 +71,7 @@
                 <input type="text" id="tip" name="tiptext" value="<?php
                     // checks if custom tip amount is a number and > 0 and if custom tip flag is set then
                     // saves the custom tip amount
-                    // if not, sets the custom tip error flag anc clears input text box
+                    // if not, sets the custom tip error flag
                     if(isset($_POST['tiptext'])) {
                         if(($_POST['tiptext'] > 0) && is_numeric($_POST['tiptext'])) { 
                             echo $_POST['tiptext'];
@@ -80,7 +80,7 @@
                             }
                         }
                         else {
-                            echo '';
+                            echo $_POST['tiptext'];
                             $tiperr = 1;
                         }
                     }
@@ -96,14 +96,14 @@
                     if(isset($_POST['split'])) {
                         // checks if split amount is a number and > 0, if it is, sets the split flag
                         // and saves the split amount
-                        // if not sets split error flag and clears input text box
+                        // if not sets split error flag
                         if(is_numeric($_POST['split']) && ($_POST['split'] > 0)) {
                             echo $_POST['split'];
                             $splitflag = 1;
                             $splitvar = $_POST['split'];
                         }
                         else {
-                            echo '';
+                            echo $_POST['split'];
                             $spliterr = 1;
                         }
                     }
